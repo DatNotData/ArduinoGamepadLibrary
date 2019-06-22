@@ -1,0 +1,41 @@
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Gamepad	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+refresh	KEYWORD2
+readButtonAndDpad	KEYWORD2
+readJoystickAxis	KEYWORD2
+
+readButtonA	KEYWORD2
+readButtonB	KEYWORD2
+readButtonX	KEYWORD2
+readButtonY	KEYWORD2
+
+readLeftBumper	KEYWORD2
+readRightBumper	KEYWORD2
+
+readBackButton	KEYWORD2
+readStartButton	KEYWORD2
+
+readLeftJoystickButton	KEYWORD2
+readRightJoystickButton	KEYWORD2
+
+readDpadUp	KEYWORD2
+readDpadRight	KEYWORD2
+readDpadDown	KEYWORD2
+readDpadLeft	KEYWORD2
+
+readLeftJoystickX	KEYWORD2
+readLeftJoystickY	KEYWORD2
+
+readRightJoystickX	KEYWORD2
+readRightJoystickY	KEYWORD2
+
+readTriggers	KEYWORD2
+
