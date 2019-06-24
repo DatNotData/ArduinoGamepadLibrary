@@ -7,7 +7,7 @@ Gamepad gamepad;
 int ledsPins[4] = {3, 5, 6, 9}; // top, right, bottom, left
 
 void setup() {
-  Serial.begin(9600);
+  gamepad.begin();
 
   for (int pin : ledsPins) {
     pinMode(pin, OUTPUT);
