@@ -8,8 +8,11 @@ Gamepad	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
+begin	KEYWORD2
 fetchFromSerial	KEYWORD2
-readButtonAndDpad	KEYWORD2
+readButton	KEYWORD2
+readButtonPressed	KEYWORD2
+readButtonReleased	KEYWORD2
 readAxis	KEYWORD2
 
 #######################################

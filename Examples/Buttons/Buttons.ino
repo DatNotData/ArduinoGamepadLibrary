@@ -7,10 +7,10 @@ Gamepad gamepad;
 int ledsPins[4] = {3, 5, 6, 9};
 
 void setup() {
-  Serial.begin(9600);
+  gamepad.begin(); 
 
-  for(int pin: ledsPins){
-    pinMode(pin, OUTPUT);
+  for(int pin: ledsPins){ // scroll through all led pins
+    pinMode(pin, OUTPUT); // set the led pins to OUTPUT
   }
 }
 
