@@ -8,34 +8,38 @@ Gamepad	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
-refresh	KEYWORD2
+fetchFromSerial	KEYWORD2
 readButtonAndDpad	KEYWORD2
-readJoystickAxis	KEYWORD2
+readAxis	KEYWORD2
 
-readButtonA	KEYWORD2
-readButtonB	KEYWORD2
-readButtonX	KEYWORD2
-readButtonY	KEYWORD2
+#######################################
+# Constants (LITERAL1)
+#######################################
 
-readLeftBumper	KEYWORD2
-readRightBumper	KEYWORD2
+BUTTON_A	LITERAL1
+BUTTON_B	LITERAL1
+BUTTON_X	LITERAL1
+BUTTON_Y	LITERAL1
 
-readBackButton	KEYWORD2
-readStartButton	KEYWORD2
+BUTTON_LEFT_BUMPER	LITERAL1
+BUTTON_RIGHT_BUMPER	LITERAL1
 
-readLeftJoystickButton	KEYWORD2
-readRightJoystickButton	KEYWORD2
+BUTTON_START	LITERAL1
+BUTTON_BACK	LITERAL1
 
-readDpadUp	KEYWORD2
-readDpadRight	KEYWORD2
-readDpadDown	KEYWORD2
-readDpadLeft	KEYWORD2
+BUTTON_DPAD_UP	LITERAL1
+BUTTON_DPAD_RIGHT	LITERAL1
+BUTTON_DPAD_DOWN	LITERAL1
+BUTTON_DPAD_LEFT	LITERAL1
 
-readLeftJoystickX	KEYWORD2
-readLeftJoystickY	KEYWORD2
+BUTTON_LEFT_JOYSTICK	LITERAL1
+BUTTON_RIGHT_JOYSTICK	LITERAL1
 
-readRightJoystickX	KEYWORD2
-readRightJoystickY	KEYWORD2
 
-readTriggers	KEYWORD2
+AXIS_LEFT_X	LITERAL1
+AXIS_LEFT_Y	LITERAL1
 
+AXIS_RIGHT_X	LITERAL1
+AXIS_RIGHT_Y	LITERAL1
+
+AXIS_TRIGGERS	LITERAL1

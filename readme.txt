@@ -38,17 +38,17 @@ Y : 3
 LB : 4
 RB : 5
 
-BACK  : 6
-START : 7
+Back  : 6
+Start : 7
 
-LJB : 8
-RJB : 9
+Left joystick button  : 8
+Right joystick button : 9
 
-joystick axis
-left X : 0
-left Y : 1
+Joystick axis
+Left X : 0
+Left Y : 1
 
-bumpers : 2
+Right X : 4
+Right Y : 3
 
-right X : 4
-right Y : 3
+Bumpers : 2

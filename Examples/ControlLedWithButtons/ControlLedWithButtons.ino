@@ -15,11 +15,11 @@ void setup() {
 }
 
 void loop() {
-  gamepad.refresh(); // refresh gamepad to get new data
+  gamepad.fetchFromSerial(); // refresh gamepad to get new data
 
   // turn on led according to different buttons
-  digitalWrite(ledsPins[0], gamepad.readButtonA());
-  digitalWrite(ledsPins[1], gamepad.readButtonB());
-  digitalWrite(ledsPins[2], gamepad.readButtonX());
-  digitalWrite(ledsPins[3], gamepad.readButtonY());
+  digitalWrite(ledsPins[0], gamepad.readButton(BUTTON_A));
+  digitalWrite(ledsPins[1], gamepad.readButton(BUTTON_B));
+  digitalWrite(ledsPins[2], gamepad.readButton(BUTTON_X));
+  digitalWrite(ledsPins[3], gamepad.readButton(BUTTON_Y));
 }
