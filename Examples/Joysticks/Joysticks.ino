@@ -16,7 +16,7 @@ void setup() {
 void loop() {
   gamepad.fetchFromSerial(); // refresh gamepad to get new data
 
-  int leftJoystickX = gamepad.readAxis(AXIS_LEFT_X) << 1; // get joystick value and map it to -255 to 255
+  int leftJoystickX = gamepad.readAxis(Gamepad::Axis::LEFT_X) << 1; // get joystick value and map it to -255 to 255
 
   if (leftJoystickX < 0) {                         // if joystick towards the left
     analogWrite(ledsPins[2], abs(leftJoystickX));  // write left led with absolute value of joystick
@@ -29,7 +29,7 @@ void loop() {
   }
 
 
-  int leftJoystickY = gamepad.readAxis(AXIS_LEFT_Y) << 1; // get joystick value and map it to -255 to 255
+  int leftJoystickY = gamepad.readAxis(Gamepad::Axis::LEFT_Y) << 1; // get joystick value and map it to -255 to 255
 
   if (leftJoystickY < 0) {                         // if joystick towards the top (yes, negative value is up)
     analogWrite(ledsPins[3], abs(leftJoystickY));  // write top led with absolute value of joystick

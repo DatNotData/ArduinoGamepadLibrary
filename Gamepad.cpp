@@ -12,19 +12,19 @@ void Gamepad::fetchFromSerial(){
   Serial.readBytes(data, 7); // write all read bytes into data variable
 }
 
-bool Gamepad::readButton(int button){
+bool Gamepad::readButton(Button button){
   return data[buttons[button][0]] >> buttons[button][1] & 1; // get byte from array, isolate the specified bit and return it
 }
 
-bool Gamepad::readButtonPressed(int button){
+bool Gamepad::readButtonPressed(Button button){
   return (data[buttons[button][0]] >> buttons[button][1] & 1) && !(previousData[buttons[button][0]] >> buttons[button][1] & 1); // return true if byte from array is 1 but from previous array is 0
 }
 
-bool Gamepad::readButtonReleased(int button){
+bool Gamepad::readButtonReleased(Button button){
   return !(data[buttons[button][0]] >> buttons[button][1] & 1) && (previousData[buttons[button][0]] >> buttons[button][1] & 1); // return true if byte from array is 0 but from previous array is 1
 }
 
-int Gamepad::readAxis(int axis){
+int Gamepad::readAxis(Axis axis){
   byte raw = data[axis];            // get byte from array
   int value = raw & 0b01111111;     // remove negative bit
   value *= (raw >> 7 & 1) ? -1 : 1; // apply negative
