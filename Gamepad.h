@@ -37,13 +37,45 @@ class Gamepad {
     static const int buttons[14][2] = {{0, 0}, {0, 1}, {0, 2}, {0, 3}, {0, 4}, {0, 5}, {0, 6}, {0, 7}, {1, 0}, {1, 1}, {1, 2}, {1, 3}, {1, 4}, {1, 5}};
 
   public:
-    void begin(); // start gamepad by starting serial communication
+    /*
+      Starts the gamepad and the gamepad's communication with the Python script
+    */
+    void begin();
     
-    void fetchFromSerial(); // request new data from the Python script and store it in the variable data
+    /*
+      Request new data from the Python script and store it in the variable data
+    */
+    void fetchFromSerial();
     
-    bool readButton(int button); // read values that either true or false (i.e. buttons) (values either 0 or 1)
-    bool readButtonPressed(int button); // return true when button is pressed (once only and not continuously)
-    bool readButtonReleased(int button); // return true when button is released
+    /*
+      Reads the current state of a button
 
-    int readAxis(int byteInData); // read values that are analog (i.e. joysticks axis) (values from -127 to 127)
+      @param button button's number, check doc or use defined button variables BUTTON_XXX
+      @return true if the button is currently being pressed and false if the button is no being pressed
+    */
+    bool readButton(int button);
+
+    /*
+      Check if the button was just pressed
+
+      @param button button's number, check doc or use defined button variables BUTTON_XXX
+      @return true if the button was not pressed but is now pressed, otherwise false 
+    */
+    bool readButtonPressed(int button);
+
+    /*
+      Check if the button was just released
+
+      @param button button's number, check doc or use defined button variables BUTTON_XXX
+      @return true if the button was pressed but is now released, otherwise false 
+    */
+    bool readButtonReleased(int button);
+
+    /*
+      Read axis value (from joystick or triggers)
+
+      @param byteInData the byte number where the data is located, use axis defined value AXIS_XXX
+      @return axis current value from -127 to 127
+    */
+    int readAxis(int byteInData);
 };
